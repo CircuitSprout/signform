@@ -1,42 +1,61 @@
-clearfix::after{
-    content: '';
-    height: 0;
-    clear: both;
-    display: table;
-    visibility: hidden;
 
-}
-.container{
+.container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between; 
+    align-items: flex-start; 
     height: 100vh;
     background-color: #0f13ff;
     margin: 0;
+    padding: 20px; 
 }
-img{
-    max-width: 400px;
-    max-height: 400px;
-    width: 400px; 
-    height: 400px; 
-    float: left; 
-    margin: 0 50px 0 50px; 
+.imgContainer{
+    flex: 0 0 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.formContainer{
-    width: 100%;
-    padding: 10px;
-    margin: 5px 5px;
-    border: 1px solid #8888883b;
+.imgContainer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.formContainer {
+    flex: 0 0 65%;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px;
     box-sizing: border-box;
     box-shadow: 0 0 10px rgb(255, 255, 255);
     background-color: #f0f0f0;
-    border-radius: 10px;
+    border-radius: 10px; 
 }
-#firstName, #lastName, #email, #password, #confirmPassword, #phoneNumber{
-    width: 20%;
-    padding: 10px 10px;
-    margin: 8px 0;
-    display: inline-block;
+
+
+.formContainer > div {
+    flex: 1 1 calc(50% - 20px); 
+    margin-bottom: 20px; 
+}
+
+.formContainer input {
+    width: 70%;
+    padding: 10px;
+    margin: 5px 0;
     border: 2px solid #000000;
     box-sizing: border-box;
+}
+
+.formContainer button {
+    width: 75%;
+    height: 40px;
+    background-color: #0f13ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formContainer button:hover {
+    background-color: #0d0db8;
 }
