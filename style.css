@@ -1,0 +1,42 @@
+clearfix::after{
+    content: '';
+    height: 0;
+    clear: both;
+    display: table;
+    visibility: hidden;
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0f13ff;
+    margin: 0;
+}
+img{
+    max-width: 400px;
+    max-height: 400px;
+    width: 400px; 
+    height: 400px; 
+    float: left; 
+    margin: 0 50px 0 50px; 
+}
+.formContainer{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 5px;
+    border: 1px solid #8888883b;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+#firstName, #lastName, #email, #password, #confirmPassword, #phoneNumber{
+    width: 20%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+}
