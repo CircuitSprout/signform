@@ -4,9 +4,9 @@
     justify-content: flex-start; /* Align items at the top */
     align-items: center; /* Center items horizontally */
     height: 100vh;
-    background-color: #0f13ff;
+    background-color: #000000;
     margin: 0;
-    padding: 20px;
+    padding: 100px 0;
 }
 
 .imgAndFormWrapper {
@@ -27,23 +27,22 @@
 
 .imgContainer img {
     max-width: 100%; /* Ensure the image fits within its container */
-    max-height: 300px; /* Limit the image height */
+    max-height: 200%; /* Limit the image height */
     height: auto; /* Maintain aspect ratio */
     width: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: Add rounded corners */
 }
 
 .formContainer {
-    flex: 0 0 65%; /* Take up 65% of the wrapper width */
+    flex: 0 0 70%; /* Take up 65% of the wrapper width */
+    height: 100%;
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next row */
     justify-content: space-between; /* Space between columns */
     align-items: flex-start; /* Align items at the top */
-    padding: 20px;
+    padding: 50px;
     box-sizing: border-box;
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-    background-color: #f0f0f0;
-    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(133, 184, 255);
+    background-color: #e0e0e0;
 }
 
 .createContainer {
@@ -52,10 +51,14 @@
     justify-content: center; /* Center the button horizontally */
     margin-top: 20px; /* Add spacing above the button */
 }
-
+.accountValid{
+    font-style: italic;
+    color:white;
+    font-size: 15px;
+}
 .createContainer button {
     width: 50%; /* Set the button width */
-    padding: 10px;
+    padding: 10px 0 10px 0;;
     background-color: #ff8000;
     color: rgb(0, 0, 0);
     border: none;
@@ -64,5 +67,5 @@
 }
 
 .createContainer button:hover {
-    background-color: #ffffff;
+    background-color: #fda464;
 }
