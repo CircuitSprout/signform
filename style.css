@@ -1,61 +1,65 @@
-
 .container {
     display: flex;
-    justify-content: space-between; 
-    align-items: flex-start; 
+    flex-direction: column; /* Stack the .imgAndFormWrapper and .createContainer vertically */
+    justify-content: flex-start; /* Align items at the top */
+    align-items: center; /* Center items horizontally */
     height: 100vh;
     background-color: #0f13ff;
     margin: 0;
-    padding: 20px; 
+    padding: 20px;
 }
-.imgContainer{
-    flex: 0 0 45%;
+
+.imgAndFormWrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row; /* Arrange the image and form side by side */
+    justify-content: space-between; /* Space between the image and form */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Take up the full width of the container */
+    margin-bottom: 20px; /* Add spacing below the wrapper */
 }
+
+.imgContainer {
+    flex: 0 0 30%; /* Take up 30% of the wrapper width */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
 .imgContainer img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Ensure the image fits within its container */
+    max-height: 300px; /* Limit the image height */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
 }
+
 .formContainer {
-    height: 55%;
-    flex: 0 0 70%;
+    flex: 0 0 65%; /* Take up 65% of the wrapper width */
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-    align-items: flex-start; 
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: space-between; /* Space between columns */
+    align-items: flex-start; /* Align items at the top */
     padding: 20px;
     box-sizing: border-box;
     box-shadow: 0 0 10px rgb(255, 255, 255);
     background-color: #f0f0f0;
+    border-radius: 10px;
 }
 
-
-.formContainer > div {
-    flex: 1 1 calc(50% - 20px); 
-    margin-bottom: 20px; 
-}
-
-.formContainer input {
-    width: 70%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 2px solid #000000;
-    box-sizing: border-box;
-}
-
-.createContainer{
+.createContainer {
+    width: 100%; /* Ensure it spans the full width of the container */
     display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 20px; /* Add spacing above the button */
 }
 
 .createContainer button {
-    width: 80%;
-    height: 80%;
+    width: 50%; /* Set the button width */
+    padding: 10px;
     background-color: #ff8000;
     color: rgb(0, 0, 0);
     border: none;
-    border-radius: 0;
+    border-radius: 5px;
     cursor: pointer;
 }
 
