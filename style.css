@@ -6,16 +6,18 @@
     height: 100vh;
     background-color: #000000;
     margin: 0;
-    padding: 5px 0;
+    padding: 0 100px;
 }
 
 .imgAndFormWrapper {
     display: flex;
     flex-direction: row; /* Arrange the image and form side by side */
-    justify-content: space-between; /* Space between the image and form */
-    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: stretch; /* Stretch the items vertically to match the wrapper's height */
     width: 100%; /* Take up the full width of the container */
-    margin-bottom: 20px; /* Add spacing below the wrapper */
+    height: 100%; /* Ensure the wrapper takes up the full height of its parent */
+    margin: 5%; /* Remove extra margin */
+    gap: 0; /* Remove any gap between the image and form containers */
 }
 
 .imgContainer {
@@ -23,12 +25,14 @@
     display: flex;
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
+    padding: 0 10px; /* Add padding to the sides */
+    height: 100%; /* Stretch to match the height of the wrapper */
 }
 
 .imgContainer img {
     max-width: 100%; /* Ensure the image fits within its container */
-    max-height: 200%; /* Limit the image height */
-    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Ensure the image does not exceed the container's height */
+    height: 100%; /* Stretch the image to fill the container's height */
     width: auto; /* Maintain aspect ratio */
 }
 .outerFormContainer{
@@ -37,21 +41,13 @@
     align-items:center;
     height:100%;
     width:auto;
-    background-color:rgb(0, 4, 255)
+    background-color:rgb(255, 255, 255)
 }
-.formContainer {
-    flex: 0 0 70%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next row */
-    justify-content: space-between; /* Space between columns */
-    align-items: flex-start; /* Align items at the top */
-    padding: 81.5px;
-    box-sizing: border-box;
-    box-shadow: 0 0 10px rgb(133, 184, 255);
-    background-color: #e0e0e0;
-}
-
+.formContainer > div {
+        flex: 1 1 calc(50% - 10px); /* Allow two columns with a small gap */
+        margin: 5px 0; /* Add some vertical spacing between rows */
+        box-sizing: border-box; /* Ensure padding and borders are included in the width */
+    }
 .createContainer {
     width: 100%; /* Ensure it spans the full width of the container */
     display: flex;
@@ -66,13 +62,21 @@
 .createContainer button {
     width: 50%; /* Set the button width */
     padding: 10px 0 10px 0;;
-    background-color: #ff8000;
+    background-color: #054d00;
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-
+.logButton{
+    color:#e0e0e0;
+}
 .createContainer button:hover {
-    background-color: #fda464;
+    background-color: #167710;
+}
+
+@media (max-width: 768px) {
+    .formContainer > div {
+        flex: 1 1 30%; /* Stack items in a single column on smaller screens */
+    }
 }
