@@ -1,42 +1,48 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UFT-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="container">
     <section class="outerFormContainer">
-    <div class="imgAndFormWrapper">
-        <div class="imgContainer">
-            <img src="C:\Users\Alexandria\Downloads\halie-west-25xggax4bSA-unsplash.jpg" alt="Leaves">
+        <!-- Keep the fakeWeb class at the top of the imgAndFormWrapper -->
+        <div class="imgAndFormWrapper">
+            <p class="fakeWeb">This is not a functioning website and is only for practice purposes! Feel free to play around and type about!</p>
+            <div class="imgContainer">
+                <img src="C:\Users\Alexandria\Downloads\halie-west-25xggax4bSA-unsplash.jpg" alt="Leaves">
+            </div>
+            <section class="formContainer">
+                <div>
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstName" name="firstname" placeholder="Enter First Name">
+                </div>
+                <div>
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastName" name="lastname" placeholder="Enter Last Name">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email">
+                </div>
+                <div>
+                    <label for="phonenumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phonenumber" placeholder="Enter Phone Number">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password">
+                </div>
+                <div>
+                    <label for="confirmpassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmpassword" placeholder="Confirm Password">
+                </div>
+            </section>
         </div>
-        <section class="formContainer">
-            <div>
-                <label for="firstname">First Name</label>
-                <input type="text" id="firstName" name="firstname" placeholder="Enter First Name">
-            </div>
-            <div>
-                <label for="lastname">Last Name</label>
-                <input type="text" id="lastName" name="lastname" placeholder="Enter Last Name">
-            </div>
-            <div>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter Email">
-            </div>
-            <div>
-                <label for="phonenumber">Phone Number</label>
-                <input type="tel" id="phoneNumber" name="phonenumber" placeholder="Enter Phone Number">
-            </div>
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter Password">
-            </div>
-            <div>
-                <label for="confirmpassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" name="confirmpassword" placeholder="Confirm Password">
-            </div>
-            <div class="createContainer">
-                <button>Create Account</button>
-            </div>
-        </section>
+        <button class="createContainer">Create Account</button>
+        <p class ="logAccount">Already have an account? Log in.</p>
+    </section>
 </body>
+</html>
